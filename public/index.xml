@@ -1,0 +1,54 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>野火</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 野火</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>立谈中，死生同，一诺千金重</copyright>
+    <lastBuildDate>Sat, 29 Jun 2024 14:02:09 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>通过cloudflare直接访问哪吒探针</title>
+        <link>http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</link>
+        <pubDate>Sat, 29 Jun 2024 14:02:09 +0800</pubDate>
+        
+        <guid>http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</guid>
+        <description>野火 http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/ -&lt;h2 id=&#34;准备一台vps&#34;&gt;准备一台vps&lt;/h2&gt;
+&lt;p&gt;这一步并不过多说明，这是最基础的，如果不懂怎么购买vps，请google，购买合适自己的VPS。&lt;/p&gt;
+&lt;h2 id=&#34;用ssh工具登录并更新系统环境&#34;&gt;用ssh工具登录并更新系统环境&lt;/h2&gt;
+&lt;h3 id=&#34;更新vps系统环境&#34;&gt;更新vps系统环境：&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt update -y &amp;amp;&amp;amp; apt install -y curl socat wget sudo
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;安装docker&#34;&gt;安装Docker：&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -fsSL https://get.docker.com | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;准备二个子域名并进行相关配置&#34;&gt;准备二个子域名并进行相关配置&lt;/h2&gt;
+&lt;p&gt;域名托管到cf上，添加两个子域名解析，前端域名开启小云朵。如下图：&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;左侧Rules-Origin Rules，然后填写如下图信息：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/cf3.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;完成后直接部署。&lt;/p&gt;
+&lt;p&gt;左侧SSL设置为“灵活”。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/cf2.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;github上-创建一个-oauth-apps&#34;&gt;GitHub上 创建一个 OAuth Apps&lt;/h2&gt;
+&lt;p&gt;1.获取链接：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;https://github.com/settings/developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2.添加一个New OAuth App&lt;/p&gt;
+&lt;p&gt;Application name：名称自定义&lt;/p&gt;
+&lt;p&gt;Homepage URL：前端地址&lt;/p&gt;
+&lt;p&gt;Authorization callback URL：前端地址+/oauth2/callback&lt;/p&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/cf.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ps：&lt;strong&gt;一定要https！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一键安装哪吒监控面板&#34;&gt;一键安装哪吒监控面板&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -o nezha.sh &amp;amp;&amp;amp; chmod +x nezha.sh &amp;amp;&amp;amp; sudo ./nezha.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;至此就能直接用域名访问哪吒面板，省去反代这个步骤！&lt;/p&gt;
+- http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/ - 立谈中，死生同，一诺千金重</description>
+        </item>
+    
+    
+  </channel>
+</rss> 
