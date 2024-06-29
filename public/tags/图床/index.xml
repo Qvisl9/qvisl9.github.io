@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图床 on 野火</title>
+    <link>//localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</link>
+    <description>Recent content in 图床 on 野火</description>
+    <generator>Hugo 0.125.1</generator>
+    <language>zh</language>
+    <copyright>立谈中，死生同，一诺千金重</copyright>
+    <lastBuildDate>Sat, 29 Jun 2024 13:35:34 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Telegraph Image：搭建你的专属开源图床</title>
+      <link>//localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Sat, 29 Jun 2024 13:35:34 +0800</pubDate>
+      <guid>//localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/</guid>
+      <description>搭建一个专属于你自己的开源图床</description>
+    </item>
+  </channel>
+</rss>

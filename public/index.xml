@@ -50,5 +50,170 @@
         </item>
     
     
+    
+        <item>
+        <title>Telegraph Image：搭建你的专属开源图床</title>
+        <link>//localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/</link>
+        <pubDate>Sat, 29 Jun 2024 13:35:34 +0800</pubDate>
+        
+        <guid>//localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/</guid>
+        <description>野火 //localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/ -&lt;h2 id=&#34;开始部署&#34;&gt;开始部署&lt;/h2&gt;
+&lt;h4 id=&#34;pages-部署-telegraph-image-项目&#34;&gt;Pages 部署 &lt;strong&gt;telegraph-Image 项目&lt;/strong&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;打开&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://github.com/x-dr/telegraph-Image&#34;&gt;telegraph-Image仓库&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;项目，先给作者点击&lt;code&gt;Star&lt;/code&gt;后再点击&lt;code&gt;Fork&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages&lt;/strong&gt; &amp;gt; &lt;strong&gt;概述&lt;/strong&gt; &amp;gt; &lt;strong&gt;创建&lt;/strong&gt; &amp;gt; &lt;strong&gt;Pages&lt;/strong&gt; &amp;gt; &lt;strong&gt;连接到Git&lt;/strong&gt; &amp;gt; 选择&lt;code&gt;telegraph-Image&lt;/code&gt;项目 &amp;gt; &lt;strong&gt;保存并部署&lt;/strong&gt;即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;绑定自定义域&#34;&gt;绑定自定义域&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这里推荐优先使用已经转入CF的域名，并开启&lt;strong&gt;小黄云&lt;/strong&gt;。如果你没有域名，也可以退而求其次使用&lt;strong&gt;CNAME方式&lt;/strong&gt;使用免费域名接入自定义域。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages /&lt;/strong&gt;&lt;code&gt;telegraph-Image&lt;/code&gt;项目 &amp;gt; &lt;strong&gt;设置&lt;/strong&gt; &amp;gt; &lt;strong&gt;函数&lt;/strong&gt; &amp;gt; &lt;strong&gt;放置&lt;/strong&gt; &amp;gt; &lt;strong&gt;制作&lt;/strong&gt; &amp;gt; &lt;strong&gt;智能&lt;/strong&gt; &amp;gt; &lt;strong&gt;保存&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;img/%E6%99%BA%E8%83%BD.png&#34; alt=&#34;智能&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;创建管理后台&#34;&gt;创建管理后台&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages&lt;/strong&gt; &amp;gt; &lt;strong&gt;D1&lt;/strong&gt; &amp;gt; &lt;strong&gt;创建数据库&lt;/strong&gt; &amp;gt; &lt;strong&gt;仪表盘&lt;/strong&gt; &amp;gt; 数据库名称&lt;code&gt;img&lt;/code&gt;&lt;em&gt;(名称可取任意值)&lt;/em&gt; &amp;gt; &lt;strong&gt;创建&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;img&lt;/code&gt;数据库 &amp;gt; &lt;strong&gt;控制台&lt;/strong&gt; &amp;gt; &lt;code&gt;粘贴以下代码&lt;/code&gt;后 &amp;gt; 点击&lt;strong&gt;执行&lt;/strong&gt; &amp;gt; 等待提示&lt;strong&gt;此查询已成功执行。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DROP TABLE IF EXISTS tgimglog;
+CREATE TABLE IF NOT EXISTS tgimglog (
+    `id` integer PRIMARY KEY NOT NULL,
+    `url` text,
+    `referer` text,
+    `ip` varchar(255),
+    `time` DATE
+);
+DROP TABLE IF EXISTS imginfo;
+CREATE TABLE IF NOT EXISTS imginfo (
+    `id` integer PRIMARY KEY NOT NULL,
+    `url` text,
+    `referer` text,
+    `ip` varchar(255),
+    `rating` text,
+    `total` integer,
+    `time` DATE
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages /&lt;/strong&gt;&lt;code&gt;telegraph-Image&lt;/code&gt;项目 &amp;gt; &lt;strong&gt;设置&lt;/strong&gt; &amp;gt; &lt;strong&gt;函数&lt;/strong&gt; &amp;gt; &lt;strong&gt;D1 数据库绑定&lt;/strong&gt; &amp;gt; 变量名&lt;code&gt;IMG&lt;/code&gt; &amp;gt; &lt;code&gt;img&lt;/code&gt;数据库 &amp;gt; 点击&lt;strong&gt;保存&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages /&lt;/strong&gt;&lt;code&gt;telegraph-Image&lt;/code&gt;项目 &amp;gt; &lt;strong&gt;设置&lt;/strong&gt; &amp;gt; &lt;strong&gt;环境变量&lt;/strong&gt; &amp;gt; &lt;strong&gt;为生产环境定义变量&lt;/strong&gt; &amp;gt; 变量内容如下:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;变量名&lt;code&gt;BASIC_USER&lt;/code&gt;，值为你的&lt;strong&gt;后台管理员用户名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;变量名&lt;code&gt;BASIC_PASS&lt;/code&gt;，值为你的&lt;strong&gt;后台管理员密码&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击&lt;strong&gt;保存&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回到 &lt;strong&gt;Workers 和 Pages /&lt;/strong&gt;&lt;code&gt;telegraph-Image&lt;/code&gt;项目 &amp;gt; &lt;strong&gt;部署&lt;/strong&gt; &amp;gt; 右下角&lt;strong&gt;三个点&lt;/strong&gt; &amp;gt; &lt;strong&gt;重试部署&lt;/strong&gt;即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+- //localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/ - 立谈中，死生同，一诺千金重</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>设置火狐浏览器关闭最后标签页不关闭浏览器</title>
+        <link>//localhost:1313/articels/2024.6.28/%E8%AE%BE%E7%BD%AE%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E6%9C%80%E5%90%8E%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%8D%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+        <pubDate>Fri, 28 Jun 2024 21:42:57 +0800</pubDate>
+        
+        <guid>//localhost:1313/articels/2024.6.28/%E8%AE%BE%E7%BD%AE%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E6%9C%80%E5%90%8E%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%8D%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+        <description>野火 //localhost:1313/articels/2024.6.28/%E8%AE%BE%E7%BD%AE%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E6%9C%80%E5%90%8E%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%8D%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8/ -&lt;p&gt;1、在地址栏输入:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;about:config
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;打开火狐配置中心&lt;/p&gt;
+&lt;p&gt;2、搜索栏中输入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;browser.tabs.closeWindowWithLastTab
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3、将默认的的值由原来的true改为false，即可完成。&lt;/p&gt;
+&lt;p&gt;4、 将true改为false的方法是双击条目即可。&lt;/p&gt;
+- //localhost:1313/articels/2024.6.28/%E8%AE%BE%E7%BD%AE%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%B3%E9%97%AD%E6%9C%80%E5%90%8E%E6%A0%87%E7%AD%BE%E9%A1%B5%E4%B8%8D%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8/ - 立谈中，死生同，一诺千金重</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>一键部署哪吒监控！统一管理你的VPS服务器</title>
+        <link>//localhost:1313/articels/2024.6.28/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84vps%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Fri, 28 Jun 2024 21:42:57 +0800</pubDate>
+        
+        <guid>//localhost:1313/articels/2024.6.28/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84vps%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>野火 //localhost:1313/articels/2024.6.28/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84vps%E6%9C%8D%E5%8A%A1%E5%99%A8/ -&lt;h2 id=&#34;准备一台vps&#34;&gt;准备一台VPS&lt;/h2&gt;
+&lt;p&gt;这一步并不过多说明，这是最基础的，如果不懂怎么购买vps，请google，购买合适自己的VPS。&lt;/p&gt;
+&lt;h2 id=&#34;用ssh工具登录并更新系统环境&#34;&gt;&lt;strong&gt;用ssh工具登录并更新系统环境&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;更新vps系统环境&#34;&gt;更新vps系统环境&lt;/h3&gt;
+&lt;p&gt;apt update -y &amp;amp;&amp;amp; apt install -y curl socat wget sudo&lt;/p&gt;
+&lt;h3 id=&#34;安装docker&#34;&gt;安装Docker&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -fsSL https://get.docker.com | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;一键安装-nginx-proxy-manager&#34;&gt;一键安装 Nginx Proxy Manager：&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;docker run -d \
+  --name=npm \
+  -p 80:80 \
+  -p 81:81 \
+  -p 443:443 \
+  -v /home/npm/data:/data \
+  -v /home/npm/letsencrypt:/etc/letsencrypt \
+  --restart=always \
+  jc21/nginx-proxy-manager:latest
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;安装成功后进入nginx后台面板&#34;&gt;安装成功后进入NGINX后台面板：&lt;/h3&gt;
+&lt;p&gt;服务器IP加81端口访问网页&lt;/p&gt;
+&lt;p&gt;用户：admin@example.com&lt;/p&gt;
+&lt;p&gt;密码：changeme&lt;/p&gt;
+&lt;p&gt;登入后记得先修改密码！&lt;/p&gt;
+&lt;h2 id=&#34;准备二个子域名&#34;&gt;&lt;strong&gt;准备二个子域名&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;域名托管到cf上，添加两个子域名解析，如下图：
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;ps：jk域名作为前端，callback则是后端。&lt;/p&gt;
+&lt;h2 id=&#34;nginx-管理器反代&#34;&gt;&lt;strong&gt;Nginx 管理器反代&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;img/1.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;img/2.png&#34; alt=&#34;自定义&#34;&gt;
+!&lt;img src=&#34;img/3.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;到这里，nginx反代也成功了，如下图：
+&lt;img src=&#34;img/4.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;github上-创建一个-oauth-apps&#34;&gt;&lt;strong&gt;GitHub上 创建一个 OAuth Apps&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;获取链接：&lt;a href=&#34;https://github.com/settings/developers&#34;&gt;https://github.com/settings/developers&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加一个New OAuth App&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Application name：名称自定义&lt;/p&gt;
+&lt;p&gt;Homepage URL：前端地址&lt;/p&gt;
+&lt;p&gt;Authorization callback URL：前端地址+/oauth2/callback&lt;/p&gt;
+&lt;p&gt;如下图：
+&lt;img src=&#34;img/5.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注册申请后，把客户ID和生成新的密钥复制下来保存，如下图：
+&lt;img src=&#34;img/6.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一键安装哪吒监控面板&#34;&gt;&lt;strong&gt;一键安装哪吒监控面板&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;下载脚本&#34;&gt;下载脚本&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wget -O nezha.sh https://raw.githubusercontent.com/lvgj-stack/nezha/master/script/install.sh &amp;amp;&amp;amp; sudo bash nezha.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;官方脚本：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl -L https://raw.githubusercontent.com/naiba/nezha/master/script/install.sh -o nezha.sh &amp;amp;&amp;amp; chmod +x nezha.sh &amp;amp;&amp;amp; sudo ./nezha.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;按照提示添写相关信息后登录面板。&lt;/p&gt;
+&lt;h3 id=&#34;脚本中选14继续安装amzayo佬的自定义主题&#34;&gt;脚本中选14继续安装amzayo佬的自定义主题&lt;/h3&gt;
+&lt;p&gt;安装完成后，回到浏览器后台管理页面，写入css文件。&lt;/p&gt;
+&lt;p&gt;css地址：&lt;a href=&#34;http://vps15o.181000.xyz:9999/amzayo_css.txt&#34;&gt;http://vps15o.181000.xyz:9999/amzayo_css.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如下图：
+&lt;img src=&#34;img/7.png&#34; alt=&#34;自定义&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将前端切换到custom，查看效果&lt;/p&gt;
+- //localhost:1313/articels/2024.6.28/%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2%E5%93%AA%E5%90%92%E7%9B%91%E6%8E%A7%E7%BB%9F%E4%B8%80%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84vps%E6%9C%8D%E5%8A%A1%E5%99%A8/ - 立谈中，死生同，一诺千金重</description>
+        </item>
+    
+    
   </channel>
 </rss> 
