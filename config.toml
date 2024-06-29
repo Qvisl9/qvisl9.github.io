@@ -39,10 +39,18 @@ client_secret = "e4b26f734f08d3a769ea134106aa973052a3dd33" # 填入记录的Clie
 url = "/Articels"
 name = "文章"
 weight = 1
+
 [[menu.main]]
 url = "/tags"
 name = "标签"
 weight = 2
+
 [[menu.main]]
 url = "https://image.jeoqm-77.top/"
 name = "图床"
+weight = 3
+
+[[menu.main]]
+url = "https://zt.jeoqm-77.top/"
+name = "探针"
+weight = 4
