@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articels on 野火</title>
-    <link>http://localhost:1313/articels/</link>
+    <link>//localhost:1313/articels/</link>
     <description>Recent content in Articels on 野火</description>
     <generator>Hugo 0.125.1</generator>
     <language>zh</language>
     <copyright>立谈中，死生同，一诺千金重</copyright>
     <lastBuildDate>Sat, 29 Jun 2024 14:02:09 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/articels/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/articels/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>通过cloudflare直接访问哪吒探针</title>
-      <link>http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</link>
+      <link>//localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</link>
       <pubDate>Sat, 29 Jun 2024 14:02:09 +0800</pubDate>
-      <guid>http://localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</guid>
+      <guid>//localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</guid>
       <description>另一种搭建哪吒探针的方案</description>
     </item>
   </channel>

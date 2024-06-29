@@ -1,4 +1,4 @@
-baseURL = "https://xxx.github.io"
+baseURL = "jeoqm-77.top"
 DefaultContentLanguage = "zh" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "zh"
 title = "野火"
@@ -30,10 +30,10 @@ title = "My Blog" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [params.gitalk]
-owner = "你的GitName"
-repo = "你的仓库名称" # 如Gitalk
-client_id = "" # 填入记录的Client ID
-client_secret = "" # 填入记录的Client Secret
+owner = "Qvisl9"
+repo = "Gitalk"  #如Gitalk
+client_id = "Ov23liHCM6AhZ3WqgzNp" # 填入记录的Client ID
+client_secret = "e4b26f734f08d3a769ea134106aa973052a3dd33" # 填入记录的Client Secret
 
 [[menu.main]]
 url = "/Articels"
