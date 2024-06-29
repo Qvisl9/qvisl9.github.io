@@ -49,8 +49,3 @@ weight = 2
 url = "https://image.jeoqm-77.top/"
 name = "图床"
 weight = 3
-
-[[menu.main]]
-url = "https://zt.jeoqm-77.top/"
-name = "探针"
-weight = 4
