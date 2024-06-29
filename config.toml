@@ -19,7 +19,7 @@ theme = "diary"
 
 [params]
 subtitle = "远芳侵古道，晴翠接荒城"
-enableGitalk = true # 开启Gitalk
+enableGitalk = false # 开启Gitalk
 enableGiscus = true
 
 # Twitter Card and Open Graph settings
