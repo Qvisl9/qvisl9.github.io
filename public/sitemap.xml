@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>//localhost:1313/articels/</loc>
-    <lastmod>2024-06-29T14:02:09+08:00</lastmod>
+    <lastmod>2024-07-07T15:55:04+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/chrome/</loc>
+    <lastmod>2024-07-07T15:55:04+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/articels/2024.7.7/chrome%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2024-07-07T15:55:04+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
-    <lastmod>2024-06-29T14:02:09+08:00</lastmod>
+    <lastmod>2024-07-07T15:55:04+08:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2024-07-07T15:55:04+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/%E5%93%AA%E5%90%92/</loc>
     <lastmod>2024-06-29T14:02:09+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/articels/2024.6.29/%E9%80%9A%E8%BF%87cloudflare%E7%9B%B4%E6%8E%A5%E8%AE%BF%E9%97%AE%E5%93%AA%E5%90%92%E9%9D%A2%E6%9D%BF/</loc>
-    <lastmod>2024-06-29T14:02:09+08:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/</loc>
     <lastmod>2024-06-29T14:02:09+08:00</lastmod>
   </url><url>
     <loc>//localhost:1313/articels/2024.6.29/telegraph-image%E6%90%AD%E5%BB%BA%E4%BD%A0%E7%9A%84%E4%B8%93%E5%B1%9E%E5%BC%80%E6%BA%90%E5%9B%BE%E5%BA%8A/</loc>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome on 野火</title>
+    <link>//localhost:1313/tags/chrome/</link>
+    <description>Recent content in Chrome on 野火</description>
+    <generator>Hugo 0.125.1</generator>
+    <language>zh</language>
+    <copyright>立谈中，死生同，一诺千金重</copyright>
+    <lastBuildDate>Sun, 07 Jul 2024 15:55:04 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome自定义设置</title>
+      <link>//localhost:1313/articels/2024.7.7/chrome%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sun, 07 Jul 2024 15:55:04 +0800</pubDate>
+      <guid>//localhost:1313/articels/2024.7.7/chrome%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE/</guid>
+      <description>一些Chrome的自定义设置</description>
+    </item>
+  </channel>
+</rss>
